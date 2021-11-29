@@ -1,5 +1,8 @@
 [![Coverage Status](https://coveralls.io/repos/github/p4m0/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/p4m0/COMP.SE.200-2021-2022-1?branch=main)
 
+run tests: npm test 
+generate coverage (text and html): npm run coverage
+
 # Student template
 
 ## Purpose of this repository
