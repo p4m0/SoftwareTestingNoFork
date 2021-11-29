@@ -9,36 +9,27 @@ const expect = chai.expect
 
 describe("#equals", () => {
 
-    it("testing string equals string", () =>{
-        expect(eq("a","a")).to.be.true
+    it("int and int", () =>{
+        expect(eq(Number(1),Number(1))).to.be.true
     });
 
-     it("testing object equals object", () =>{
-        expect(eq(Object,Object)).to.be.true
+     it("float and int", () =>{
+        expect(eq(Number(2.1),Number(2))).to.be.false
     });
 
-    it("testing object equals string", () =>{
-        expect(eq(Object,"test")).to.be.false
+    it("neagtive int and int", () =>{
+        expect(eq(Number(-3),Number(3))).to.be.false
     });
 
-    it("testing NaN equals NaN", () =>{
-        expect(eq(NaN,NaN)).to.be.true
+    //string = 16-bit unsigned integer
+    it("int and string of same int", () =>{
+        expect(eq(Number(4),String(4))).to.be.true
     });
 
-    it("testing int (1) equals int (1)", () =>{
-        expect(eq(1,1)).to.be.true
+    it("+Infinity and -Infinity", () =>{
+        expect(eq(Number(+Infinity),Number(-Infinity))).to.be.false
     });
-
-    it("testing int (1) equals int (2)", () =>{
-        expect(eq(1,2)).to.be.false
-    });
-
-    it("testing two nulls", () =>{
-        expect(eq(null,null)).to.be.true
-    });
-
-    it("Eq testing null and NaN", () =>{
-        expect(eq(null,NaN)).to.be.false
-    });
+    //additional tests
+    //TODO
 
 })
