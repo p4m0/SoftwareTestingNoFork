@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "mocha 'tests/*.js'",
-    "coverage": "c8 --reporter html --reporter text mocha 'tests/*.js'"
+    "coverage": "c8 --reporter html --reporter text -x 'src/' mocha 'tests/*.js'",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+
   },
   "author": "",
   "license": "MIT",
