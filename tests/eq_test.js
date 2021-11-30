@@ -29,7 +29,7 @@ describe("#equals", () => {
     it("+Infinity and -Infinity", () =>{
         expect(eq(Number(+Infinity),Number(-Infinity))).to.be.false
     });
-    //additional tests
-    //TODO
+
+    
 
 })
