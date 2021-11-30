@@ -28,7 +28,7 @@ describe("#toFinite", () => {
     });
 
     it("NaN", () =>{
-        expect(toFinite(NaN)).not.to.be.NaN
+        expect(toFinite(NaN)).to.equal(0)
     });
     //true = 1, false = 0
     it("bool", () =>{
@@ -40,11 +40,11 @@ describe("#toFinite", () => {
     });
 
     it("undefined", () =>{
-        expect(toFinite(undefined)).not.to.be.NaN
+        expect(toFinite(undefined)).to.equal(0)
     });
 
     it("empty object", () =>{
-        expect(toFinite(Object())).not.to.be.NaN
+        expect(toFinite(Object())).to.equal(0)
     });
 
     it("object of type number", () =>{
@@ -52,20 +52,20 @@ describe("#toFinite", () => {
     });
 
     it("empty symbol", () =>{
-        expect(toFinite(Symbol())).not.to.be.NaN
+        expect(toFinite(Symbol())).to.equal(0)
     });
 
     it("symbol of type number", () =>{
-        expect(toFinite(Symbol(1))).not.to.be.NaN
+        expect(toFinite(Symbol(1))).to.equal(0)
     });
     it("symbol of type number", () =>{
-        expect(toFinite(Symbol("123"))).not.to.be.NaN
+        expect(toFinite(Symbol("123"))).to.equal(0)
     });
     it("array", () =>{
         expect(toFinite(Array())).to.equal(0)
     });
 
     it("array of size 3 with undefined inside", () =>{
-        expect(toFinite(Array(3))).not.to.be.NaN
+        expect(toFinite(Array(3))).to.equal(0)
     });
 })
