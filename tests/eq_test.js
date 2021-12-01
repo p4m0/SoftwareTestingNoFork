@@ -30,6 +30,34 @@ describe("#equals", () => {
         expect(eq(Number(+Infinity),Number(-Infinity))).to.be.false
     });
 
+    it("null and nan", () =>{
+        expect(eq(null,NaN)).to.be.false
+    });
+
+    it("undefined and int like number", () =>{
+        expect(eq(undefined,Number(1))).to.be.false
+    });
+
+    it("int like number and null", () =>{
+        expect(eq(Number(1),null)).to.be.false
+    });
+
+    it("NaN and undefined", () =>{
+        expect(eq(NaN,undefined)).to.be.false
+    });
+
+    it("array and NaN", () =>{
+        expect(eq(Array(),NaN)).to.be.false
+    });
+
+    it("+Infinity and undefined", () =>{
+        expect(eq(Number(+Infinity),Number(-undefined))).to.be.false
+    });
+
+    it("-Infinity and int like number", () =>{
+        expect(eq(Number(-Infinity),Number(1))).to.be.false
+    });
+
     
 
 })

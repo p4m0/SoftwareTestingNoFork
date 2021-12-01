@@ -67,5 +67,9 @@ describe("#toNumber", () => {
     it("array of size 3 with undefined inside", () =>{
         expect(toNumber(Array(3))).to.be.NaN
     });
+
+    it("function as parameter", () =>{
+        expect(toNumber(function (x) { return x; })).to.be.NaN
+    });
     
 })
