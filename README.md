@@ -1,9 +1,9 @@
-[![Coverage Status](https://coveralls.io/repos/github/p4m0/COMP.SE.200-2021-2022-1/badge.svg?branch=main)](https://coveralls.io/github/p4m0/COMP.SE.200-2021-2022-1?branch=main)
-install packages: npm install
 
-run tests: npm test 
+###### install packages: npm install
 
-generate coverage (text and html): npm run coverage
+###### run tests: npm test 
+
+###### generate coverage (text and html): npm run coverage
 
 Consider this as a budget fork since I got tired of fighting with some settings/setup with a forked project
 
