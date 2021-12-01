@@ -51,7 +51,7 @@ describe("#equals", () => {
     });
 
     it("+Infinity and undefined", () =>{
-        expect(eq(Number(+Infinity),Number(-undefined))).to.be.false
+        expect(eq(Number(+Infinity),Number(undefined))).to.be.false
     });
 
     it("-Infinity and int like number", () =>{

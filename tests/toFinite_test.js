@@ -68,4 +68,8 @@ describe("#toFinite", () => {
     it("array of size 3 with undefined inside", () =>{
         expect(toFinite(Array(3))).to.equal(0)
     });
+
+    it("false as parameter", () =>{
+        expect(toFinite(Boolean(false))).to.equal(0)
+    });
 })

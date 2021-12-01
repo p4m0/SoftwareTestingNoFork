@@ -71,5 +71,9 @@ describe("#toNumber", () => {
     it("function as parameter", () =>{
         expect(toNumber(function (x) { return x; })).to.be.NaN
     });
+
+    it("number 0 as parameter", () =>{
+        expect(toNumber(Number(0))).to.be.equal(0)
+    });
     
 })

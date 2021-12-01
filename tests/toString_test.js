@@ -13,11 +13,11 @@ describe("#toString", () => {
     //     expect(toString("a")).to.equal("a")
     // });
     it("int like number", () =>{
-        expect(toString("1")).to.equal("1")
+        expect(toString(Number(1))).to.equal("1")
     });
 
     it("number like string", () =>{
-        expect(toString("2.2")).to.equal("2.2")
+        expect(toString(Number(2.2))).to.equal("2.2")
     });
 
     it("float like number", () =>{
@@ -25,11 +25,11 @@ describe("#toString", () => {
     });
 
     it("-Infinity", () =>{
-        expect(toString("-Infinity")).to.not.equal(-Infinity)
+        expect(toString("-Infinity")).to.equal("-Infinity")
     });
 
     it("+Infinity", () =>{
-        expect(toString('+Infinity')).to.not.equal(+Infinity)
+        expect(toString('+Infinity')).to.equal("+Infinity")
     });
 
     it("NaN", () =>{
@@ -49,7 +49,7 @@ describe("#toString", () => {
     });
 
     it("empty object", () =>{
-        expect(toString(Object())).to.not.equal(Object())
+        expect(toString(Object())).to.equal('[object Object]')
     });
 
     it("object of type number", () =>{
@@ -63,14 +63,16 @@ describe("#toString", () => {
     it("symbol of type number", () =>{
         expect(toString(Symbol(1))).to.equal('Symbol(1)')
     });
-    it("symbol of type number", () =>{
-        expect(toString(Symbol("123"))).to.equal('Symbol(123)')
-    });
+    
     it("array", () =>{
         expect(toString(Array())).to.equal('')
     });
 
     it("array of size 3 with undefined inside", () =>{
         expect(toString(Array(3))).to.equal(',,')
+    });
+
+    it("number 0 as parameter", () =>{
+        expect(toString(0)).to.equal("0")
     });
 })

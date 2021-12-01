@@ -9,9 +9,6 @@ const expect = chai.expect
 
 describe("#toInteger", () => {
 
-    // it("testing string equals string", () =>{
-    //     expect(toInteger(1)).to.equal(1)
-    // });
     it("Int like number", () =>{
         expect(toInteger(1)).to.equal(1)
     });
